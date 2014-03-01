@@ -7,11 +7,12 @@ function InitColorPicker ()
 
 document.body.appendChild(canvas);
 
-ctx.fillRect(0,0, 100, 100);
+ctx.fillRect(0,0, 255, 255);
 
- for (var i = 0; i < 256; i++)
+ for (var x = 0; x < 256; x++)
  { 
-ctx.fillStyle = 'rgb(i, 0, 255)';    
-ctx.fillRect(0,0, 100, 100);
+    for (var  y = 0; y < 256; y++)
+ctx.fillStyle = 'rgb(x, y, 255)';    
+ctx.fillRect(x,y, x+1, y+1);
  }   
 }
